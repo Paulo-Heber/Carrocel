@@ -1,0 +1,85 @@
+.conteiner {
+    background-image: url(/src/images/imagem.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alinhamento {
+    display: flex;
+    align-items: center;
+}
+
+ .esquerda {
+    background-image: url(/src/images/seta\ esquerda.png);
+}
+
+.seta {
+    height: 7.9rem;
+    width: 4.9rem;
+    margin: 0 6.5rem;
+    transition: .3s;
+} 
+
+.seta:hover {
+    cursor: pointer;
+    scale: 110%;
+}
+
+.informacoes {
+    background-color: white;
+    height: 70rem;
+    width: 62rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 6.5rem 6rem;
+    border-radius: 1rem;
+}
+
+.informacoes .titulo {
+    font-weight: 400;
+    font-size: 5rem;
+    margin-bottom: 8rem;
+}
+
+.informacoes .explicacao {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 5rem;
+}
+
+.informacoes .botao {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.informacoes .botao.botao1 {
+    color: #C50000;
+}
+
+.informacoes .botao.botao2 {
+    color: #D9DD10;
+}
+
+.informacoes .botao.botao3 {
+    color: #A63A17;
+}
+
+.informacoes .botao.botao4 {
+    color: #10ACDD;
+}
+
+.direita {
+    background-image: url(/src/images/seta\ direita.png);
+}
+
+.desativa {
+    opacity: 50%;
+    
+}
+
+.desativa:hover {
+    cursor: auto;
+    scale: 100%;
+}
