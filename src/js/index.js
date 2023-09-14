@@ -6,45 +6,77 @@
 // quando clicado na seta direita tem q almentar o numero do contador até o 3
 
 const setas = document.getElementsByClassName('seta')
+const botao = document.getElementsByClassName('botao')
+let saibaMais = botao[0]
 let setaEsquerda = setas[0]
 let setaDireita = setas[1]
-var setaClicada
+var slide = 0
 
 if (setaEsquerda) {
     setaEsquerda.addEventListener('click', function () {
-        setaClicada = setaEsquerda
-        numeroSlide--
+        if (slide === 0) {
+            mudarSlide()
+            console.log('slide é igual a ' + slide);
+        } else if (slide > 0) {
+            slide--
+            console.log(slide);
+            mudarSlide()
+        }
     })
 }
 if (setaDireita) {
     setaDireita.addEventListener('click', function () {
-        setaClicada = setaDireita
-        numeroSlide++
+        if (slide === 3) {
+            mudarSlide()
+            console.log('slide é igual a ' + slide);
+        } else if (slide < 3) {
+            slide++
+            console.log(slide);
+            mudarSlide()
+        }
     })
 }
 
-var numeroSlide = [0, 1, 2, 3]
-var i = 0
-
-setaEsquerda.addEventListener('click', function () {
-
-
-    switch (numeroSlide[i--]) {
+function mudarSlide() {
+    switch (slide) {
         case 0:
             console.log('caso 0');
             setaEsquerda.classList.add('desativa')
-            break; case 1:
+            // CRIAR UMA FUNCAO PARA ADICIONAR E REMOVER AS CLASSES DO BOTAO
+            saibaMais.classList.add('botao1')
+            saibaMais.classList.remove('botao2')
+            saibaMais.classList.remove('botao3')
+            saibaMais.classList.remove('botao4')
+
+            break;
+        case 1:
             console.log('caso 1');
+            setaEsquerda.classList.remove('desativa')
+            saibaMais.classList.remove('botao1')
+            saibaMais.classList.add('botao2')
+            saibaMais.classList.remove('botao3')
+            saibaMais.classList.remove('botao4')
             break;
         case 2:
             console.log('caso 2');
             setaDireita.classList.remove('desativa')
+            saibaMais.classList.remove('botao1')
+            saibaMais.classList.remove('botao2')
+            saibaMais.classList.add('botao3')
+            saibaMais.classList.remove('botao4')
             break;
         case 3:
             console.log('caso 3');
+            setaDireita.classList.add('desativa')
+            saibaMais.classList.remove('botao1')
+            saibaMais.classList.remove('botao2')
+            saibaMais.classList.remove('botao3')
+            saibaMais.classList.add('botao4')
             break;
 
         default:
             break;
     }
-})
+}
+
+
