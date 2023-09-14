@@ -7,9 +7,9 @@
 
 const setas = document.getElementsByClassName('seta')
 const botao = document.getElementsByClassName('botao')
-let saibaMais = botao[0]
-let setaEsquerda = setas[0]
-let setaDireita = setas[1]
+const saibaMais = botao[0]
+const setaEsquerda = setas[0]
+const setaDireita = setas[1]
 var slide = 0
 
 if (setaEsquerda) {

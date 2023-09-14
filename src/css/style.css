@@ -12,16 +12,17 @@
     align-items: center;
 }
 
- .esquerda {
+/* .esquerda {
     background-image: url(/src/images/seta\ esquerda.png);
-}
+} */
 
 .seta {
+    background-image: url(/src/images/seta\ esquerda.png);
     height: 7.9rem;
     width: 4.9rem;
     margin: 0 6.5rem;
     transition: .3s;
-} 
+}
 
 .seta:hover {
     cursor: pointer;
@@ -70,13 +71,12 @@
     color: #10ACDD;
 }
 
-.direita {
+/* .direita {
     background-image: url(/src/images/seta\ direita.png);
-}
+} */
 
 .desativa {
     opacity: 50%;
-    
 }
 
 .desativa:hover {
