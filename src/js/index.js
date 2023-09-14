@@ -28,10 +28,8 @@ if (setaDireita) {
     setaDireita.addEventListener('click', function () {
         if (slide === 3) {
             mudarSlide()
-            console.log('slide é igual a ' + slide);
         } else if (slide < 3) {
             slide++
-            console.log(slide);
             mudarSlide()
         }
     })
@@ -42,7 +40,6 @@ function mudarSlide() {
         case 0:
             console.log('caso 0');
             setaEsquerda.classList.add('desativa')
-            // CRIAR UMA FUNCAO PARA ADICIONAR E REMOVER AS CLASSES DO BOTAO
             saibaMais.classList.add('botao1')
             saibaMais.classList.remove('botao2')
             saibaMais.classList.remove('botao3')
@@ -80,3 +77,9 @@ function mudarSlide() {
 }
 
 
+function  mudarClasseBotao(saibaMais) {
+    
+}
+// ------------CRIAR UMA FUNCAO PARA ADICIONAR E REMOVER AS CLASSES DO BOTAO--------------
+//adicionar a classe de acordo com o numero do caso
+//remover todas as outras classes
