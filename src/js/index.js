@@ -16,10 +16,8 @@ if (setaEsquerda) {
     setaEsquerda.addEventListener('click', function () {
         if (slide === 0) {
             mudarSlide()
-            console.log('slide é igual a ' + slide);
         } else if (slide > 0) {
             slide--
-            console.log(slide);
             mudarSlide()
         }
     })
@@ -35,51 +33,38 @@ if (setaDireita) {
     })
 }
 
+
+//----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES---------- 
+
 function mudarSlide() {
     switch (slide) {
         case 0:
             console.log('caso 0');
             setaEsquerda.classList.add('desativa')
-            saibaMais.classList.add('botao1')
-            saibaMais.classList.remove('botao2')
-            saibaMais.classList.remove('botao3')
-            saibaMais.classList.remove('botao4')
-
+            mudarClasseBotao()
             break;
         case 1:
             console.log('caso 1');
             setaEsquerda.classList.remove('desativa')
-            saibaMais.classList.remove('botao1')
-            saibaMais.classList.add('botao2')
-            saibaMais.classList.remove('botao3')
-            saibaMais.classList.remove('botao4')
+            mudarClasseBotao()
             break;
         case 2:
             console.log('caso 2');
             setaDireita.classList.remove('desativa')
-            saibaMais.classList.remove('botao1')
-            saibaMais.classList.remove('botao2')
-            saibaMais.classList.add('botao3')
-            saibaMais.classList.remove('botao4')
+            mudarClasseBotao()
             break;
         case 3:
             console.log('caso 3');
             setaDireita.classList.add('desativa')
-            saibaMais.classList.remove('botao1')
-            saibaMais.classList.remove('botao2')
-            saibaMais.classList.remove('botao3')
-            saibaMais.classList.add('botao4')
-            break;
-
-        default:
+            mudarClasseBotao()
             break;
     }
 }
 
-
-function  mudarClasseBotao(saibaMais) {
-    
+function mudarClasseBotao() {
+    saibaMais.classList.remove('botao0')
+    saibaMais.classList.remove('botao1')
+    saibaMais.classList.remove('botao2')
+    saibaMais.classList.remove('botao3')
+    saibaMais.classList.add(`botao${slide}`)
 }
-// ------------CRIAR UMA FUNCAO PARA ADICIONAR E REMOVER AS CLASSES DO BOTAO--------------
-//adicionar a classe de acordo com o numero do caso
-//remover todas as outras classes
