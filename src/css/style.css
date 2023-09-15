@@ -1,10 +1,22 @@
 .conteiner {
-    background-image: url(/src/images/imagem.png);
+    
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.conteiner.background0{
+    background-image: url(/src/images/imagem.png);
+}
+.conteiner.background1{
+    background-image: url(/src/images/imagem\ 1.png);
+}
+.conteiner.background2{
+    background-image: url(/src/images/imagem\ 2.png);
+}
+.conteiner.background3{
+    background-image: url(/src/images/imagem\ 3.png);
 }
 
 .alinhamento {

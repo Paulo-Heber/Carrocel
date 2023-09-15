@@ -7,6 +7,10 @@
 
 const setas = document.getElementsByClassName('seta')
 const botao = document.getElementsByClassName('botao')
+const h2 = document.getElementsByClassName('titulo')
+const backGround = document.getElementsByClassName('conteiner')
+const imagemFundo = backGround[0]
+const titulo = h2[0]
 const saibaMais = botao[0]
 const setaEsquerda = setas[0]
 const setaDireita = setas[1]
@@ -41,22 +45,30 @@ function mudarSlide() {
         case 0:
             console.log('caso 0');
             setaEsquerda.classList.add('desativa')
+            mudarImagemFundo()
             mudarClasseBotao()
+            mudarTitulo()
             break;
         case 1:
             console.log('caso 1');
             setaEsquerda.classList.remove('desativa')
+            mudarImagemFundo()
             mudarClasseBotao()
+            mudarTitulo()
             break;
         case 2:
             console.log('caso 2');
             setaDireita.classList.remove('desativa')
+            mudarImagemFundo()
             mudarClasseBotao()
+            mudarTitulo()
             break;
         case 3:
             console.log('caso 3');
             setaDireita.classList.add('desativa')
+            mudarImagemFundo()
             mudarClasseBotao()
+            mudarTitulo()
             break;
     }
 }
@@ -67,4 +79,16 @@ function mudarClasseBotao() {
     saibaMais.classList.remove('botao2')
     saibaMais.classList.remove('botao3')
     saibaMais.classList.add(`botao${slide}`)
+}
+
+function mudarTitulo() {
+    titulo.innerHTML = `Título imagem ${slide + 1}`
+}
+
+function mudarImagemFundo() {
+    imagemFundo.classList.remove('background0')
+    imagemFundo.classList.remove('background1')
+    imagemFundo.classList.remove('background2')
+    imagemFundo.classList.remove('background3')
+    imagemFundo.classList.add(`background${slide}`)
 }
