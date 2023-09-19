@@ -1,21 +1,24 @@
 .conteiner {
-    
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.conteiner.background0{
+
+.conteiner.background0 {
     background-image: url(/src/images/imagem.png);
 }
-.conteiner.background1{
+
+.conteiner.background1 {
     background-image: url(/src/images/imagem\ 1.png);
 }
-.conteiner.background2{
+
+.conteiner.background2 {
     background-image: url(/src/images/imagem\ 2.png);
 }
-.conteiner.background3{
+
+.conteiner.background3 {
     background-image: url(/src/images/imagem\ 3.png);
 }
 
@@ -35,13 +38,12 @@
 .seta:hover {
     cursor: pointer;
     scale: 110%;
-    
 }
 
 .informacoes {
     background-color: white;
-    height: 70rem;
-    width: 62rem;
+    min-height: 70rem;
+    max-width: 62rem;
     font-family: 'Roboto', sans-serif;
     padding: 6.5rem 6rem;
     border-radius: 1rem;
@@ -81,11 +83,12 @@
 }
 
 .direita {
-    transform: rotate(180deg); 
+    transform: rotate(180deg);
 }
 
 .desativa {
     opacity: 50%;
+
 }
 
 .desativa:hover {

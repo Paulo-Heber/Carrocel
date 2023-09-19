@@ -1,94 +1,64 @@
-// quando apertar nas setas a imagem de fundo tem que mudar
-// quando chegar ao fim das fotos para ambos os lados a seta deve ganhar um opacidade e perder o click
-// a cor do botao saiba mais tambem deve mudar de acordo com a foto
-
-//quando clicado na seta esquerda tem q diminuir o numero do contador até o 0
-// quando clicado na seta direita tem q almentar o numero do contador até o 3
-
-const setas = document.getElementsByClassName('seta')
-const botao = document.getElementsByClassName('botao')
-const h2 = document.getElementsByClassName('titulo')
-const backGround = document.getElementsByClassName('conteiner')
-const imagemFundo = backGround[0]
-const titulo = h2[0]
-const saibaMais = botao[0]
+var numeroSlide = 0
+const pagina = document.getElementsByClassName('comum')
+const setas = document.getElementsByClassName('setas')
 const setaEsquerda = setas[0]
 const setaDireita = setas[1]
-var slide = 0
+let larguraTela = window.innerWidth
 
-if (setaEsquerda) {
-    setaEsquerda.addEventListener('click', function () {
-        if (slide === 0) {
-            mudarSlide()
-        } else if (slide > 0) {
-            slide--
-            mudarSlide()
-        }
-    })
+if (larguraTela > 950) {
+    if (setaEsquerda) {
+        setaEsquerda.addEventListener('click', function () {
+            if (numeroSlide === 0) {
+                mudarSlide()
+            } else if (numeroSlide > 0) {
+                numeroSlide--
+                mudarSlide()
+            }
+    
+        })
+    
+    }
+    if (setaDireita) {
+        setaDireita.addEventListener('click', function () {
+            if (numeroSlide === 3) {
+                mudarSlide()
+            } else if (numeroSlide < 3) {
+                numeroSlide++
+                mudarSlide()
+            }
+    
+        })
+    
+    }
 }
-if (setaDireita) {
-    setaDireita.addEventListener('click', function () {
-        if (slide === 3) {
-            mudarSlide()
-        } else if (slide < 3) {
-            slide++
-            mudarSlide()
-        }
-    })
-}
 
-
-//----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES---------- 
+//----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES----------FUNÇÕES----------
 
 function mudarSlide() {
-    switch (slide) {
+    switch (numeroSlide) {
         case 0:
-            console.log('caso 0');
             setaEsquerda.classList.add('desativa')
-            mudarImagemFundo()
-            mudarClasseBotao()
-            mudarTitulo()
+            passarSlide()
             break;
         case 1:
-            console.log('caso 1');
             setaEsquerda.classList.remove('desativa')
-            mudarImagemFundo()
-            mudarClasseBotao()
-            mudarTitulo()
+            passarSlide()
             break;
         case 2:
-            console.log('caso 2');
             setaDireita.classList.remove('desativa')
-            mudarImagemFundo()
-            mudarClasseBotao()
-            mudarTitulo()
+            passarSlide()
             break;
         case 3:
-            console.log('caso 3');
             setaDireita.classList.add('desativa')
-            mudarImagemFundo()
-            mudarClasseBotao()
-            mudarTitulo()
+            passarSlide()
             break;
     }
 }
 
-function mudarClasseBotao() {
-    saibaMais.classList.remove('botao0')
-    saibaMais.classList.remove('botao1')
-    saibaMais.classList.remove('botao2')
-    saibaMais.classList.remove('botao3')
-    saibaMais.classList.add(`botao${slide}`)
-}
-
-function mudarTitulo() {
-    titulo.innerHTML = `Título imagem ${slide + 1}`
-}
-
-function mudarImagemFundo() {
-    imagemFundo.classList.remove('background0')
-    imagemFundo.classList.remove('background1')
-    imagemFundo.classList.remove('background2')
-    imagemFundo.classList.remove('background3')
-    imagemFundo.classList.add(`background${slide}`)
+function passarSlide() {
+    pagina[0].classList.add('slideInativo')
+    pagina[1].classList.add('slideInativo')
+    pagina[2].classList.add('slideInativo')
+    pagina[3].classList.add('slideInativo')
+    pagina[`${numeroSlide}`].classList.remove('slideInativo')
 }
