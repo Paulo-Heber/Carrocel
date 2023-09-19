@@ -1,3 +1,9 @@
+@media(min-width:1921px) {
+.comum{
+    background-size: 100%;
+}
+}
+
 @media(max-width:1440px) {
     .informacoes {
         padding: 5rem;
@@ -11,7 +17,7 @@
     }
 
     .informacoes .texto {
-        margin-bottom: .5rem;
+        margin-bottom: 2.5rem;
         font-size: 2rem;
 
     }

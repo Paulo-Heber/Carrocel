@@ -1,61 +1,46 @@
-.conteiner {
-    background-repeat: no-repeat;
+.setas {
+    background-image: url(/src/images/seta\ direita.png);
+    width: 4.9rem;
+    height: 7.8rem;
+    position: absolute;
+    right: 0;
+    margin: 7rem;
+    top: 40%;
+}
+
+.esquerda {
+    transform: rotate(180deg);
+    left: 0;
+
+}
+
+.comum {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.conteiner.background0 {
-    background-image: url(/src/images/imagem.png);
-}
-
-.conteiner.background1 {
-    background-image: url(/src/images/imagem\ 1.png);
-}
-
-.conteiner.background2 {
-    background-image: url(/src/images/imagem\ 2.png);
-}
-
-.conteiner.background3 {
-    background-image: url(/src/images/imagem\ 3.png);
-}
-
-.alinhamento {
-    display: flex;
-    align-items: center;
-}
-
-.seta {
-    background-image: url(/src/images/seta\ esquerda.png);
-    height: 7.9rem;
-    width: 4.9rem;
-    margin: 0 6.5rem;
-    transition: .3s;
-}
-
-.seta:hover {
-    cursor: pointer;
-    scale: 110%;
+    background-repeat: no-repeat;
+    
 }
 
 .informacoes {
     background-color: white;
-    min-height: 70rem;
-    max-width: 62rem;
-    font-family: 'Roboto', sans-serif;
-    padding: 6.5rem 6rem;
+    width: 62rem;
+    height: 70rem;
     border-radius: 1rem;
+    margin-left: 18rem;
+    font-family: 'Robota', sans-serif;
+    padding: 6.5rem 6rem;
 }
 
 .informacoes .titulo {
     font-weight: 400;
     font-size: 5rem;
+    line-height: 5.859rem;
     margin-bottom: 8rem;
+
 }
 
-.informacoes .explicacao {
+.informacoes .texto {
     font-size: 2.5rem;
     line-height: 3.5rem;
     margin-bottom: 5rem;
@@ -64,34 +49,47 @@
 .informacoes .botao {
     font-weight: 700;
     font-size: 3rem;
+    line-height:
+        3.516rem;
 }
 
-.informacoes .botao.botao0 {
+.botao0 {
     color: #C50000;
 }
 
-.informacoes .botao.botao1 {
+.botao1 {
     color: #D9DD10;
 }
 
-.informacoes .botao.botao2 {
+.botao2 {
     color: #A63A17;
 }
 
-.informacoes .botao.botao3 {
+.botao3 {
     color: #10ACDD;
 }
 
-.direita {
-    transform: rotate(180deg);
+.slide0 {
+    background-image: url(/src/images/imagem.png);
+}
+
+.slide1 {
+    background-image: url(/src/images/imagem\ 1.png);
+}
+
+.slide2 {
+    background-image: url(/src/images/imagem\ 2.png);
+}
+
+.slide3 {
+    background-image: url(/src/images/imagem\ 3.png);
+}
+
+.slideInativo {
+    display: none;
 }
 
 .desativa {
     opacity: 50%;
-
-}
-
-.desativa:hover {
     cursor: auto;
-    scale: 100%;
 }
