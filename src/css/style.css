@@ -1,5 +1,5 @@
 .setas {
-    background-image: url(src/image/seta.png);
+    background-image: url(./src/image/seta.png);
     width: 4.9rem;
     height: 7.8rem;
     position: absolute;
@@ -70,19 +70,19 @@
 }
 
 .slide0 {
-    background-image: url(src/image/sakura.png)
+    background-image: url(./src/image/sakura.png)
 }
 
 .slide1 {
-    background-image: url(src/image/flores.png);
+    background-image: url(./src/image/flores.png);
 }
 
 .slide2 {
-    background-image: url(src/image/montanhas.png);
+    background-image: url(./src/image/montanhas.png);
 }
 
 .slide3 {
-    background-image: url(src/image/lago.png);
+    background-image: url(./src/image/lago.png);
 }
 
 .slideInativo {
