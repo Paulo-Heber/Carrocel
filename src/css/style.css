@@ -1,5 +1,5 @@
 .setas {
-    background-image: url(src/images/seta\direita.png);
+    background-image: url(src/images/seta\ direita.png);
     width: 4.9rem;
     height: 7.8rem;
     position: absolute;
@@ -74,15 +74,15 @@
 }
 
 .slide1 {
-    background-image: url(src/images/imagem\1.png);
+    background-image: url(src/images/imagem\ 1.png);
 }
 
 .slide2 {
-    background-image: url(src/images/imagem\2.png);
+    background-image: url(src/images/imagem\ 2.png);
 }
 
 .slide3 {
-    background-image: url(src/images/imagem\3.png);
+    background-image: url(src/images/imagem\ 3.png);
 }
 
 .slideInativo {
