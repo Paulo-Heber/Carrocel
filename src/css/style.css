@@ -32,7 +32,7 @@
     padding: 6.5rem 6rem;
 }
 
-.informacoes .titulo {
+.titulo {
     font-weight: 400;
     font-size: 5rem;
     line-height: 5.859rem;
@@ -40,7 +40,7 @@
 
 }
 
-.informacoes .texto {
+.texto {
     font-size: 2.5rem;
     line-height: 3.5rem;
     margin-bottom: 5rem;
@@ -70,19 +70,19 @@
 }
 
 .slide0 {
-    background-image: url(../src/image/sakura.png)
+    background-image: url(../image/sakura.png)
 }
 
 .slide1 {
-    background-image: url(../src/image/flores.png);
+    background-image: url(../image/flores.png);
 }
 
 .slide2 {
-    background-image: url(../src/image/montanhas.png);
+    background-image: url(../image/montanhas.png);
 }
 
 .slide3 {
-    background-image: url(../src/image/lago.png);
+    background-image: url(../image/lago.png);
 }
 
 .slideInativo {

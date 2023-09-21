@@ -1,7 +1,7 @@
 @media(min-width:1921px) {
-.comum{
-    background-size: 100%;
-}
+    .comum {
+        background-size: 100%;
+    }
 }
 
 @media(max-width:1440px) {
@@ -12,14 +12,13 @@
     }
 
     .informacoes .titulo {
-        font-size: 40px;
-        margin-bottom: 6rem;
+        font-size: 4rem;
+        margin-bottom: 4rem;
     }
 
     .informacoes .texto {
         margin-bottom: 2.5rem;
         font-size: 2rem;
-
     }
 }
 
@@ -29,7 +28,8 @@
         justify-content: center;
     }
 
-    .informacoes {
+    .comum .informacoes {
+        margin-left: 0;
         margin: 2rem;
         opacity: 85%;
         text-align: center;
@@ -52,15 +52,15 @@
         display: none;
     }
 
-    .slide1 {
+    #corpo .slide1 {
         display: flex;
     }
 
-    .slide2 {
+    #corpo .slide2 {
         display: flex;
     }
 
-    .slide3 {
+    #corpo .slide3 {
         display: flex;
     }
 }
