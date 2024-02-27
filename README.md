@@ -1,6 +1,6 @@
 # Carrocel
 
-<img src="./src/gifs/carrocel.gif" alt="Descrição" style="border-radius: 15px;" />
+<img src="./src/gifs/carrocel.gif" alt="gif carrocel" style="border-radius: 15px;" />
 
 ## Propósito
 
